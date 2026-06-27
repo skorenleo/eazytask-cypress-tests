@@ -1,10 +1,10 @@
-# EasyTask End-to-End Tests
+# EazyTask End-to-End Tests
 
-Automated end-to-end tests for the EasyTask web application using Cypress.
+Automated end-to-end tests for the EazyTask web application using Cypress.
 
 ## About
 
-This repository contains end-to-end tests covering core user workflows in the EasyTask web application. The project follows common QA automation practices with a focus on readability, maintainability, and scalability.
+This repository contains end-to-end tests covering core user workflows in the EazyTask web application. The project follows common QA automation practices with a focus on readability, maintainability, and scalability.
 
 ## Tech Stack
 
