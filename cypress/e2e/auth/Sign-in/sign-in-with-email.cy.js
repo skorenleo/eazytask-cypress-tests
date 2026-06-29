@@ -8,7 +8,6 @@ describe("SignIn-WithEmail", () => {
     cy.get("input[type='email']").type("lanatestkorentest@gmail.com");
     //locate and type password
     cy.get("input[type='password']").type("Test12345!");
-    //locate and click 'Sign in' button
-    cy.get('button[type="submit"]').click();
+    cy.url().should("include", "/dashboard");
   });
 }); 

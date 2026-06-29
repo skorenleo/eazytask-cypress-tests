@@ -1,25 +1,12 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add("login", () => {
+    cy.visit("https://task.ezvz.app/login");
+    //locate and click 'Sign with Email' button
+    cy.get("button").contains("Sign in with email").click();
+    //locate and type email
+    cy.get("input[type='email']").type("lanatestkorentest@gmail.com");
+    //locate and type password
+    cy.get("input[type='password']").type("Test12345!");
+    cy.url().should("include", "/dashboard");
+    cy.getCookie("auth-token").should("exist");
+    cy.wait(1000);
+});
