@@ -9,8 +9,6 @@ describe("SignIn-WithEmail", () => {
     //locate and type password
     cy.get("input[type='password']").type("Test12345!");
     //locate and click 'Sign in' button
-    cy.get('form')
-  .find('button[type="submit"]')
-  .click();
+    cy.get('button[type="submit"]').click();
   });
 }); 
