@@ -16,9 +16,13 @@ This repository contains end-to-end tests covering core user workflows in the Ea
 ## Test Coverage
 
 ### Authentication
+✅ Register with email  
+✅ Sign in with email  
+✅ Custom login command (`cy.login()`)
 
-- ✅ Register with email
-- ✅ Sign in with email
+### Project Management
+✅ Create the first project when no projects exist  
+✅ Create an additional project
 
 ## Project Structure
 
@@ -26,8 +30,17 @@ This repository contains end-to-end tests covering core user workflows in the Ea
 cypress/
 ├── e2e/
 │   └── auth/
+│       ├── Create-account/
+│       │   └── register-with-email.cy.js
+│       ├── Sign-in/
+│       │   └── sign-in-with-email.cy.js
+│       └── home-page/
+│           └── Create New Project/
+│               └── create-new-project.cy.js
 ├── fixtures/
-├── support/
+└── support/
+    ├── commands.js
+    └── e2e.js
 ```
 
 ## Installation
@@ -49,11 +62,3 @@ Run all tests in headless mode:
 ```bash
 npx cypress run
 ```
-
-## Roadmap
-
-- Implement Page Object Model
-- Add Custom Commands
-- Add API Tests
-- Configure GitHub Actions
-- Expand test coverage
